@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Binary from "./componentes/Binary"
+import HookForm from "./componentes/HookForm"
+import FormCrud from "./componentes/FormCrud";
+import Saludo from "./componentes/Saludo";
+import Comment from "./componentes/Comment";
+import Avatar from "./componentes/Avatar";
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Avatar avatarUrl={'logo512.png'} urlImagen={Comment.avatarUrl} />
+      <Comment author={Avatar}/>
+      <Saludo name="Nahuel"/>
+      <Saludo name="Maria"/>
+      <Saludo name="Brandon"/>
+      <Binary/>
+      <FormCrud/>
+      <HookForm/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
